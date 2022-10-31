@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.0"
+# I COMMENTED THIS OUT ruby "2.7.0"
+ruby "3.0.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -75,4 +76,17 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'simplecov', require: false, group: :test
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
+end
+
+#Added proper gem to create rpsec!!!!!
+gem 'tzinfo-data'
+
+#Adding Capybara
+group :development, :test do
+  gem 'capybara'
 end
